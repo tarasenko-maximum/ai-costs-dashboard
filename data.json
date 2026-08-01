@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-01 09:33",
-  "generated_ts": 1785569610,
+  "generated_at": "2026-08-01 10:03",
+  "generated_ts": 1785571397,
   "balances": {
-    "deepseek": 47.33,
-    "openrouter_total": 59.75,
-    "openrouter_monthly": 4.97,
+    "deepseek": 47.22,
+    "openrouter_total": 59.76,
+    "openrouter_monthly": 4.98,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
@@ -89,9 +89,9 @@
     },
     {
       "date": "2026-08-01",
-      "deepseek_balance": 47.34,
-      "openrouter_usage": 59.75,
-      "openrouter_monthly": 4.97
+      "deepseek_balance": 47.22,
+      "openrouter_usage": 59.76,
+      "openrouter_monthly": 4.98
     }
   ],
   "payments": [
@@ -208,5 +208,65 @@
       "category_label": "Инфраструктура"
     }
   ],
-  "payment_count": 14
+  "payment_count": 14,
+  "subscriptions": [
+    {
+      "vendor": "Adobe/Autodesk",
+      "avg_eur": 277.51,
+      "monthly": false,
+      "category": "tools",
+      "last_date": "16.03.2026"
+    },
+    {
+      "vendor": "Canva",
+      "avg_eur": 102.31,
+      "monthly": false,
+      "category": "tools",
+      "last_date": "16.02.2026"
+    },
+    {
+      "vendor": "Anthropic (Claude)",
+      "avg_eur": 83.65,
+      "monthly": false,
+      "category": "tokens",
+      "last_date": "23.02.2026"
+    },
+    {
+      "vendor": "Google One",
+      "avg_eur": 17.4,
+      "monthly": false,
+      "category": "tools",
+      "last_date": "22.12.2025"
+    },
+    {
+      "vendor": "Aqua Voice",
+      "avg_eur": 9.1,
+      "monthly": false,
+      "category": "tools",
+      "last_date": "22.06.2026"
+    },
+    {
+      "vendor": "Nous Research (Hermes)",
+      "avg_eur": 9.01,
+      "monthly": false,
+      "category": "tokens",
+      "last_date": "15.06.2026"
+    },
+    {
+      "vendor": "YouTube Premium",
+      "avg_eur": 7.0,
+      "monthly": false,
+      "category": "tools",
+      "last_date": "21.05.2026"
+    },
+    {
+      "vendor": "Spotify",
+      "avg_eur": 5.99,
+      "monthly": false,
+      "category": "tools",
+      "last_date": "15.12.2025"
+    }
+  ],
+  "monthly_subs_eur": 511.97,
+  "recommendations": null
 }
