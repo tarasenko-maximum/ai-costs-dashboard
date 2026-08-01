@@ -1,0 +1,212 @@
+{
+  "generated_at": "2026-08-01 09:31",
+  "generated_ts": 1785569482,
+  "balances": {
+    "deepseek": 47.34,
+    "openrouter_total": 59.75,
+    "openrouter_monthly": 4.97,
+    "firecrawl_sub": "€17/мес"
+  },
+  "totals": {
+    "month_usd": 279.34,
+    "month_eur": 27.48,
+    "all_time_usd": 279.34,
+    "all_time_eur": 27.48,
+    "tokens_usd": 183.55,
+    "tools_usd": 109.67,
+    "infra_usd": 15.8
+  },
+  "categories": [
+    {
+      "key": "tokens",
+      "label": "Токены LLM",
+      "amount": 183.55
+    },
+    {
+      "key": "tools",
+      "label": "Инструменты и подписки",
+      "amount": 109.67
+    },
+    {
+      "key": "infra",
+      "label": "Инфраструктура",
+      "amount": 15.8
+    }
+  ],
+  "vendors": [
+    {
+      "name": "Anthropic (Claude)",
+      "usd": 120.0,
+      "eur": 0.0
+    },
+    {
+      "name": "OpenRouter",
+      "usd": 63.55,
+      "eur": 0.0
+    },
+    {
+      "name": "Hetzner (PayPal)",
+      "usd": 0.0,
+      "eur": 27.48
+    },
+    {
+      "name": "fal.ai",
+      "usd": 25.0,
+      "eur": 0.0
+    },
+    {
+      "name": "Google Play",
+      "usd": 19.99,
+      "eur": 0.0
+    },
+    {
+      "name": "Firecrawl",
+      "usd": 19.0,
+      "eur": 0.0
+    },
+    {
+      "name": "Cloudflare",
+      "usd": 15.8,
+      "eur": 0.0
+    },
+    {
+      "name": "Aqua Voice",
+      "usd": 10.0,
+      "eur": 0.0
+    },
+    {
+      "name": "\"eleven labs inc.\" <invoice+statements+a",
+      "usd": 6.0,
+      "eur": 0.0
+    }
+  ],
+  "balance_history": [
+    {
+      "date": "2026-07-31",
+      "deepseek_balance": 47.64,
+      "openrouter_usage": 29.8,
+      "openrouter_monthly": 29.8
+    },
+    {
+      "date": "2026-08-01",
+      "deepseek_balance": 47.34,
+      "openrouter_usage": 59.75,
+      "openrouter_monthly": 4.97
+    }
+  ],
+  "payments": [
+    {
+      "date": "Thu, 2 Jul",
+      "vendor": "Anthropic (Claude)",
+      "amount": 100.0,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-07-31",
+      "vendor": "OpenRouter",
+      "amount": 31.65,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-07-31",
+      "vendor": "Firecrawl",
+      "amount": 19.0,
+      "currency": "USD",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
+    },
+    {
+      "date": "2026-07-28",
+      "vendor": "\"eleven labs inc.\" <invoice+statements+a",
+      "amount": 6.0,
+      "currency": "USD",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
+    },
+    {
+      "date": "2026-07-27",
+      "vendor": "Cloudflare",
+      "amount": 10.46,
+      "currency": "USD",
+      "category": "infra",
+      "category_label": "Инфраструктура"
+    },
+    {
+      "date": "2026-07-25",
+      "vendor": "OpenRouter",
+      "amount": 21.1,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-07-25",
+      "vendor": "Anthropic (Claude)",
+      "amount": 20.0,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-07-24",
+      "vendor": "fal.ai",
+      "amount": 25.0,
+      "currency": "USD",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
+    },
+    {
+      "date": "2026-07-22",
+      "vendor": "Aqua Voice",
+      "amount": 10.0,
+      "currency": "USD",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
+    },
+    {
+      "date": "2026-07-20",
+      "vendor": "OpenRouter",
+      "amount": 10.8,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-07-20",
+      "vendor": "Google Play",
+      "amount": 19.99,
+      "currency": "USD",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
+    },
+    {
+      "date": "2026-07-13",
+      "vendor": "Hetzner (PayPal)",
+      "amount": 27.48,
+      "currency": "EUR",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
+    },
+    {
+      "date": "2026-07-02",
+      "vendor": "Cloudflare",
+      "amount": 2.67,
+      "currency": "USD",
+      "category": "infra",
+      "category_label": "Инфраструктура"
+    },
+    {
+      "date": "2026-07-02",
+      "vendor": "Cloudflare",
+      "amount": 2.67,
+      "currency": "USD",
+      "category": "infra",
+      "category_label": "Инфраструктура"
+    }
+  ],
+  "payment_count": 14
+}

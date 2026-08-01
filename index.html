@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAXIMUM · AI-Бюджет — контроль расходов</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#0a1628; --bg2:#0f1f38; --card:rgba(15,31,56,.85); --line:rgba(148,163,184,.14);
+  --gold:#c9a74b; --gold2:#d4b45a; --green:#34d399; --red:#f87171; --blue:#60a5fa; --purple:#a78bfa;
+  --text:#e2e8f0; --muted:#94a3b8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Manrope',sans-serif;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.4;
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(201,167,75,.12), transparent 60%),
+    radial-gradient(700px 400px at -10% 30%, rgba(96,165,250,.08), transparent 60%),
+    radial-gradient(600px 500px at 50% 110%, rgba(167,139,250,.07), transparent 60%);}
+.wrap{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(10,22,40,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1200px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.05rem}
+.logo-badge{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#8a6d2b);display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+.live{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted)}
+.live-dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.5)}70%{box-shadow:0 0 0 9px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+
+/* hero */
+.hero{padding:72px 0 40px;text-align:center}
+.hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.12}
+.hero h1 span{background:linear-gradient(120deg,var(--gold2),var(--gold),#e9d18a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--muted);max-width:640px;margin:16px auto 0;font-size:1.05rem}
+.updated{margin-top:14px;font-size:.82rem;color:var(--muted)}
+.updated b{color:var(--gold)}
+
+/* kpi */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:44px 0 8px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;backdrop-filter:blur(10px);transition:transform .25s,border-color .25s}
+.kpi:hover{transform:translateY(-3px);border-color:rgba(201,167,75,.45)}
+.kpi .k-label{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.kpi .k-val{font-size:1.75rem;font-weight:800;margin-top:8px;font-variant-numeric:tabular-nums}
+.kpi .k-sub{font-size:.78rem;color:var(--muted);margin-top:4px}
+.kpi.gold .k-val{color:var(--gold)}
+.kpi.green .k-val{color:var(--green)}
+.kpi.blue .k-val{color:var(--blue)}
+.kpi.purple .k-val{color:var(--purple)}
+
+/* grid */
+.grid2{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-top:16px}
+.grid1{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;backdrop-filter:blur(10px)}
+.card h3{font-size:1rem;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.card .c-sub{font-size:.8rem;color:var(--muted);margin-bottom:16px}
+.chart-box{position:relative;height:290px}
+.chart-box.tall{height:340px}
+canvas{width:100%!important;height:100%!important}
+
+/* vendors */
+.vendors{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.vend{display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px;font-size:.85rem}
+.vend .v-name{font-weight:600}
+.vend .v-amt{font-weight:700;font-variant-numeric:tabular-nums;color:var(--gold)}
+.vend .v-bar{grid-column:1/-1;height:5px;border-radius:3px;background:rgba(148,163,184,.12);overflow:hidden}
+.vend .v-bar i{display:block;height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+
+/* payments table */
+table{width:100%;border-collapse:collapse;font-size:.86rem}
+th{text-align:left;color:var(--muted);font-weight:600;font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:11px 12px;border-bottom:1px solid rgba(148,163,184,.08);font-variant-numeric:tabular-nums}
+tr:hover td{background:rgba(201,167,75,.05)}
+.tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:.72rem;font-weight:700}
+.tag.tokens{background:rgba(96,165,250,.14);color:var(--blue)}
+.tag.tools{background:rgba(201,167,75,.14);color:var(--gold2)}
+.tag.infra{background:rgba(167,139,250,.14);color:var(--purple)}
+.neg{color:var(--red)}
+
+/* footer */
+footer{margin-top:48px;padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem;text-align:center}
+footer b{color:var(--gold)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:968px){.kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+@media(max-width:560px){.kpis{grid-template-columns:1fr}.hero{padding:48px 0 28px}.card{padding:18px}.chart-box{height:240px}.chart-box.tall{height:280px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd">
+    <div class="logo"><div class="logo-badge">M</div> MAXIMUM · AI-Бюджет</div>
+    <div class="live"><span class="live-dot"></span><span id="liveText">загрузка данных…</span></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <h1>Контроль <span>AI-расходов</span><br>в реальном времени</h1>
+    <p>Сколько уходит на токены LLM, инструменты и инфраструктуру. Каждый платёж сразу отражается на графиках — обновляется автоматически после оплаты.</p>
+    <div class="updated">Последнее обновление: <b id="updatedAt">—</b></div>
+  </section>
+
+  <section class="kpis" id="kpis"></section>
+
+  <div class="grid2">
+    <div class="card reveal">
+      <h3>📈 Баланс DeepSeek</h3>
+      <div class="c-sub">Динамика остатка на балансе токенов · $</div>
+      <div class="chart-box tall"><canvas id="balanceChart"></canvas></div>
+    </div>
+    <div class="card reveal">
+      <h3>🧭 Расходы по назначению</h3>
+      <div class="c-sub">Куда уходят деньги · всё время</div>
+      <div class="chart-box"><canvas id="catChart"></canvas></div>
+      <div class="vendors" id="vendors"></div>
+    </div>
+  </div>
+
+  <div class="grid1">
+    <div class="card reveal">
+      <h3>💳 Последние платежи</h3>
+      <div class="c-sub">Чеки и оплаты, собранные финансовым агентом</div>
+      <div style="overflow-x:auto"><table>
+        <thead><tr><th>Дата</th><th>Сервис</th><th>Назначение</th><th style="text-align:right">Сумма</th></tr></thead>
+        <tbody id="paymentsBody"></tbody>
+      </table></div>
+    </div>
+  </div>
+
+  <footer>
+    Сайт обновляется финансовым агентом <b>MAXIMUM</b> после каждой оплаты · данные из чеков и API-балансов
+    <br>DeepSeek · OpenRouter · Anthropic · Firecrawl · ElevenLabs · fal.ai · Cloudflare
+  </footer>
+</div>
+
+<script>
+let DATA = null;
+
+async function load(){
+  try{
+    const r = await fetch('data.json?t=' + Date.now());
+    DATA = await r.json();
+    render();
+  }catch(e){
+    document.getElementById('liveText').textContent = 'ошибка загрузки данных';
+  }
+}
+
+function fmtUSD(v){
+  if(v==null) return '—';
+  return '$' + Number(v).toLocaleString('ru-RU',{minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+function render(){
+  const d = DATA;
+  document.getElementById('updatedAt').textContent = d.generated_at;
+  document.getElementById('liveText').textContent = 'обновлено · онлайн';
+
+  const b = d.balances, t = d.totals;
+  const dsChange = d.balance_history && d.balance_history.length>1
+    ? d.balance_history[d.balance_history.length-1].deepseek_balance - d.balance_history[d.balance_history.length-2].deepseek_balance : null;
+
+  document.getElementById('kpis').innerHTML = `
+    <div class="kpi gold reveal"><div class="k-label">Баланс DeepSeek</div>
+      <div class="k-val">${fmtUSD(b.deepseek)}</div>
+      <div class="k-sub">${dsChange!=null && dsChange<0 ? 'расход за сутки −$'+Math.abs(dsChange).toFixed(2) : 'за сутки ~$0'}</div></div>
+    <div class="kpi blue reveal"><div class="k-label">OpenRouter · месяц</div>
+      <div class="k-val">${fmtUSD(b.openrouter_monthly)}</div>
+      <div class="k-sub">всего ${fmtUSD(b.openrouter_total)}</div></div>
+    <div class="kpi green reveal"><div class="k-label">Расход за 30 дней</div>
+      <div class="k-val">${fmtUSD(t.month_usd)}</div>
+      <div class="k-sub">${t.month_eur>0 ? '≈ '+Number(t.month_eur).toLocaleString('ru-RU')+' €' : ''} · все время ${fmtUSD(t.all_time_usd)}</div></div>
+    <div class="kpi purple reveal"><div class="k-label">Подписки · Firecrawl</div>
+      <div class="k-val">${b.firecrawl_sub||'—'}</div>
+      <div class="k-sub">хостинг, парсинг, генерация</div></div>`;
+
+  renderBalance(d.balance_history||[]);
+  renderCategories(d.categories||[]);
+  renderVendors(d.vendors||[]);
+  renderPayments(d.payments||[]);
+
+  document.querySelectorAll('.reveal').forEach((el,i)=>{ setTimeout(()=>el.classList.add('visible'), i*80); });
+}
+
+function renderBalance(hist){
+  const labels = hist.map(h=>{const p=h.date.split('-');return p[2]+'.'+p[1]});
+  const values = hist.map(h=>h.deepseek_balance);
+  const ctx = document.getElementById('balanceChart').getContext('2d');
+  const grad = ctx.createLinearGradient(0,0,0,320);
+  grad.addColorStop(0,'rgba(201,167,75,.35)'); grad.addColorStop(1,'rgba(201,167,75,0)');
+  new Chart(ctx,{
+    type:'line',
+    data:{labels, datasets:[{
+      label:'Баланс DeepSeek, $', data:values, borderColor:'#d4b45a', backgroundColor:grad,
+      fill:true, tension:.4, pointRadius:4, pointBackgroundColor:'#0f1f38', pointBorderColor:'#d4b45a', pointBorderWidth:2,
+      borderWidth:2.5
+    }]},
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false},
+        tooltip:{backgroundColor:'#132544',titleColor:'#e2e8f0',bodyColor:'#d4b45a',padding:12,borderColor:'rgba(201,167,75,.4)',borderWidth:1}},
+      scales:{
+        x:{grid:{color:'rgba(148,163,184,.08)'},ticks:{color:'#94a3b8'}},
+        y:{grid:{color:'rgba(148,163,184,.08)'},ticks:{color:'#94a3b8'}}
+      }
+    }
+  });
+}
+
+function renderCategories(cats){
+  const colors = {'tokens':'#60a5fa','tools':'#d4b45a','infra':'#a78bfa'};
+  new Chart(document.getElementById('catChart'),{
+    type:'doughnut',
+    data:{labels:cats.map(c=>c.label), datasets:[{data:cats.map(c=>c.amount),backgroundColor:cats.map(c=>colors[c.key]||'#94a3b8'),borderColor:'#0f1f38',borderWidth:3,hoverOffset:8}]},
+    options:{
+      responsive:true, maintainAspectRatio:false, cutout:'62%',
+      plugins:{legend:{position:'bottom',labels:{color:'#e2e8f0',usePointStyle:true,pointStyle:'circle',padding:16,font:{size:12}}},
+        tooltip:{backgroundColor:'#132544',titleColor:'#e2e8f0',bodyColor:'#d4b45a',padding:12}}
+    }
+  });
+}
+
+function renderVendors(vendors){
+  const max = Math.max(...vendors.map(v=>v.usd+v.eur), 0.01);
+  document.getElementById('vendors').innerHTML = vendors.slice(0,6).map(v=>{
+    const total = v.usd + v.eur*1.08;
+    return `<div class="vend"><div class="v-name">${v.name}</div><div class="v-amt">${fmtUSD(total)}</div>
+      <div class="v-bar"><i style="width:${Math.max(4,(total/max)*100).toFixed(1)}%"></i></div></div>`;
+  }).join('');
+}
+
+function renderPayments(payments){
+  const rows = payments.slice(0,20).map(p=>{
+    const tagCls = p.category==='tokens'?'tokens':p.category==='tools'?'tools':'infra';
+    const amt = (p.currency==='EUR'?'€':'$') + Number(p.amount).toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2});
+    return `<tr><td>${p.date||'—'}</td><td>${p.vendor}</td><td><span class="tag ${tagCls}">${p.category_label}</span></td>
+      <td style="text-align:right" class="neg">${amt}</td></tr>`;
+  }).join('');
+  document.getElementById('paymentsBody').innerHTML = rows || '<tr><td colspan="4" style="color:var(--muted)">Пока нет данных</td></tr>';
+}
+
+load();
+setInterval(load, 60000); // auto-refresh каждую минуту
+</script>
+</body>
+</html>
