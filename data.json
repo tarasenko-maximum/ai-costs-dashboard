@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-01 10:06",
-  "generated_ts": 1785571609,
+  "generated_at": "2026-08-01 10:08",
+  "generated_ts": 1785571727,
   "balances": {
-    "deepseek": 47.2,
+    "deepseek": 47.19,
     "openrouter_total": 59.76,
     "openrouter_monthly": 4.98,
     "firecrawl_sub": "€17/мес"
@@ -232,13 +232,6 @@
       "last_date": "04.05.2026"
     },
     {
-      "vendor": "Hetzner (сервер)",
-      "avg_eur": 27.48,
-      "monthly": true,
-      "category": "infra",
-      "last_date": null
-    },
-    {
       "vendor": "Google One",
       "avg_eur": 17.4,
       "monthly": true,
@@ -274,7 +267,7 @@
       "last_date": "15.12.2025"
     }
   ],
-  "monthly_subs_eur": 57.87,
+  "monthly_subs_eur": 30.39,
   "recommendations": {
     "summary": "Расходы на AI и подписки неоптимальны: переплачиваем за Adobe/Autodesk и Canva, а также за дорогие LLM (Claude) при наличии более дешёвого DeepSeek. Бюджет можно ужать почти вдвое за счёт отмены лишних подписок и перевода части задач на бесплатные аналоги. Ключевые бизнес-процессы (бот MAXI, KOMSILUK, скрейпинг) продолжают работать, но требуют контроля расходов и внедрения бесплатных инструментов.",
     "overpay": [
