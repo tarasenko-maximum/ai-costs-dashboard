@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-01 10:05",
-  "generated_ts": 1785571550,
+  "generated_at": "2026-08-01 10:06",
+  "generated_ts": 1785571583,
   "balances": {
-    "deepseek": 47.21,
+    "deepseek": 47.2,
     "openrouter_total": 59.76,
     "openrouter_monthly": 4.98,
     "firecrawl_sub": "€17/мес"
@@ -13,8 +13,8 @@
     "all_time_usd": 279.34,
     "all_time_eur": 27.48,
     "tokens_usd": 183.55,
-    "tools_usd": 109.67,
-    "infra_usd": 15.8
+    "tools_usd": 79.99,
+    "infra_usd": 45.48
   },
   "categories": [
     {
@@ -25,12 +25,12 @@
     {
       "key": "tools",
       "label": "Инструменты и подписки",
-      "amount": 109.67
+      "amount": 79.99
     },
     {
       "key": "infra",
       "label": "Инфраструктура",
-      "amount": 15.8
+      "amount": 45.48
     }
   ],
   "vendors": [
@@ -45,7 +45,7 @@
       "eur": 0.0
     },
     {
-      "name": "Hetzner (PayPal)",
+      "name": "Hetzner (сервер)",
       "usd": 0.0,
       "eur": 27.48
     },
@@ -185,11 +185,11 @@
     },
     {
       "date": "2026-07-13",
-      "vendor": "Hetzner (PayPal)",
+      "vendor": "Hetzner (сервер)",
       "amount": 27.48,
       "currency": "EUR",
-      "category": "tools",
-      "category_label": "Инструменты и подписки"
+      "category": "infra",
+      "category_label": "Инфраструктура"
     },
     {
       "date": "2026-07-02",
@@ -232,6 +232,13 @@
       "last_date": "23.02.2026"
     },
     {
+      "vendor": "Hetzner (сервер)",
+      "avg_eur": 27.48,
+      "monthly": true,
+      "category": "infra",
+      "last_date": null
+    },
+    {
       "vendor": "Google One",
       "avg_eur": 17.4,
       "monthly": false,
@@ -267,7 +274,7 @@
       "last_date": "15.12.2025"
     }
   ],
-  "monthly_subs_eur": 511.97,
+  "monthly_subs_eur": 27.48,
   "recommendations": {
     "summary": "Расходы на AI и подписки неоптимальны: переплачиваем за Adobe/Autodesk и Canva, а также за дорогие LLM (Claude) при наличии более дешёвого DeepSeek. Бюджет можно ужать почти вдвое за счёт отмены лишних подписок и перевода части задач на бесплатные аналоги. Ключевые бизнес-процессы (бот MAXI, KOMSILUK, скрейпинг) продолжают работать, но требуют контроля расходов и внедрения бесплатных инструментов.",
     "overpay": [
