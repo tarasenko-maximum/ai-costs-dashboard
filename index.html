@@ -139,6 +139,22 @@ footer b{color:var(--gold)}
     </div>
   </div>
 
+  <div class="grid1">
+    <div class="card reveal" id="recsCard" style="display:none">
+      <h3>🧠 Рекомендации аналитика</h3>
+      <div class="c-sub" id="recsSub">Сравнение расходов с задачами и рабочими процессами · обновляется агентом</div>
+      <div id="recsContent"></div>
+    </div>
+  </div>
+
+  <div class="grid1">
+    <div class="card reveal">
+      <h3>🔁 Подписки с карты</h3>
+      <div class="c-sub">Ежемесячные списания из банковских изводов (Google One, YouTube, Spotify…) · <b id="subsTotal"></b></div>
+      <div id="subsBody" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px"></div>
+    </div>
+  </div>
+
   <footer>
     Сайт обновляется финансовым агентом <b>MAXIMUM</b> после каждой оплаты · данные из чеков и API-балансов
     <br>DeepSeek · OpenRouter · Anthropic · Firecrawl · ElevenLabs · fal.ai · Cloudflare
@@ -190,6 +206,8 @@ function render(){
   renderCategories(d.categories||[]);
   renderVendors(d.vendors||[]);
   renderPayments(d.payments||[]);
+  renderSubscriptions(d.subscriptions||[], d.monthly_subs_eur);
+  renderRecommendations(d.recommendations);
 
   document.querySelectorAll('.reveal').forEach((el,i)=>{ setTimeout(()=>el.classList.add('visible'), i*80); });
 }
@@ -249,6 +267,75 @@ function renderPayments(payments){
       <td style="text-align:right" class="neg">${amt}</td></tr>`;
   }).join('');
   document.getElementById('paymentsBody').innerHTML = rows || '<tr><td colspan="4" style="color:var(--muted)">Пока нет данных</td></tr>';
+}
+
+function renderSubscriptions(subs, total){
+  const box = document.getElementById('subsBody');
+  if(!subs || !subs.length){
+    box.innerHTML = '<div style="color:var(--muted)">Подписки не определены</div>';
+    return;
+  }
+  document.getElementById('subsTotal').textContent = '≈ €' + (total||0).toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2}) + '/мес';
+  box.innerHTML = subs.map(s=>{
+    const cls = s.category==='tokens'?'tokens':s.category==='tools'?'tools':'infra';
+    return `<div style="background:rgba(148,163,184,.06);border:1px solid var(--line);border-radius:12px;padding:14px 16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <b style="font-size:.9rem">${s.vendor}</b>
+        <span class="tag ${cls}">${s.monthly?'🔁 месяц':'разово'}</span>
+      </div>
+      <div style="margin-top:8px;font-size:1.15rem;font-weight:800;color:var(--gold)">≈ €${(s.avg_eur||0).toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2})}<span style="font-size:.75rem;color:var(--muted);font-weight:600">/мес</span></div>
+      <div style="margin-top:4px;font-size:.75rem;color:var(--muted)">последнее: ${s.last_date||'—'}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderRecommendations(recs){
+  if(!recs || !recs.summary) return;
+  const card = document.getElementById('recsCard');
+  card.style.display = '';
+  document.getElementById('recsSub').textContent = 'Сформировано аналитиком · ' + (recs.generated_at||'') + ' · сравнение расходов с задачами MAXIMUM';
+
+  const html = [];
+  html.push(`<div style="padding:14px 16px;border-radius:12px;background:rgba(201,167,75,.08);border:1px solid rgba(201,167,75,.3);margin-bottom:16px;font-size:.95rem"><b>💬 ${recs.summary}</b></div>`);
+
+  if(recs.overpay && recs.overpay.length){
+    html.push('<div style="font-size:.78rem;color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin:14px 0 8px">⚠️ Переплаты</div>');
+    recs.overpay.forEach(o=>{
+      html.push(`<div style="background:rgba(248,113,113,.05);border-left:3px solid var(--red);border-radius:8px;padding:10px 14px;margin-bottom:8px">
+        <b>${o.title}</b>${o.saving_eur?' <span style="color:var(--red)">(−€'+o.saving_eur+'/мес)</span>':''}<br>
+        <span style="font-size:.85rem;color:var(--muted)">${o.detail||''}</span><br>
+        <span style="font-size:.82rem;color:var(--gold2)">→ ${o.action||''}</span></div>`);
+    });
+  }
+  if(recs.missing && recs.missing.length){
+    html.push('<div style="font-size:.78rem;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin:14px 0 8px">🔧 Чего не хватает</div>');
+    recs.missing.forEach(m=>{
+      html.push(`<div style="background:rgba(96,165,250,.05);border-left:3px solid var(--blue);border-radius:8px;padding:10px 14px;margin-bottom:8px">
+        <b>${m.title}</b><br>
+        <span style="font-size:.85rem;color:var(--muted)">${m.detail||''}</span><br>
+        ${m.free_alternative?`<span style="font-size:.82rem;color:var(--green)">✓ бесплатно: ${m.free_alternative}</span>`:''}</div>`);
+    });
+  }
+  if(recs.budget_plan && recs.budget_plan.length){
+    html.push('<div style="font-size:.78rem;color:var(--gold2);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin:14px 0 8px">📅 Бюджет на месяц</div>');
+    html.push('<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px">');
+    recs.budget_plan.forEach(b=>{
+      html.push(`<div style="background:rgba(148,163,184,.06);border:1px solid var(--line);border-radius:10px;padding:12px 14px">
+        <div style="font-size:.8rem;color:var(--muted)">${b.category}</div>
+        <div style="font-size:1.2rem;font-weight:800;color:var(--gold2)">€${(b.monthly_eur||0).toLocaleString('ru-RU')}</div>
+        <div style="font-size:.75rem;color:var(--muted)">${b.comment||''}</div></div>`);
+    });
+    html.push('</div>');
+  }
+  if(recs.tools_worth && recs.tools_worth.length){
+    html.push('<div style="font-size:.78rem;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin:14px 0 8px">✅ Оправданные инструменты</div>');
+    recs.tools_worth.forEach(t=>{
+      html.push(`<div style="padding:8px 14px;margin-bottom:6px;border-bottom:1px solid rgba(148,163,184,.08)">
+        <b>${t.tool}</b> <span style="font-size:.82rem;color:var(--muted)">— ${t.reason||''}</span>
+        ${t.alternative?`<br><span style="font-size:.8rem;color:var(--green)">альтернатива: ${t.alternative}</span>`:''}</div>`);
+    });
+  }
+  document.getElementById('recsContent').innerHTML = html.join('');
 }
 
 load();
