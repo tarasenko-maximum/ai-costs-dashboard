@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-01 10:33",
-  "generated_ts": 1785573183,
+  "generated_at": "2026-08-01 10:38",
+  "generated_ts": 1785573480,
   "balances": {
-    "deepseek": 46.98,
-    "deepseek_spend_month": 19.8,
+    "deepseek": 46.96,
+    "deepseek_spend_month": 20.4,
     "deepseek_spend_days": 1,
     "openrouter_total": 59.76,
     "openrouter_monthly": 4.98,
@@ -257,6 +257,13 @@
       "last_date": "15.06.2026"
     },
     {
+      "vendor": "Suno (Pro)",
+      "avg_eur": 8.55,
+      "monthly": true,
+      "category": "tools",
+      "last_date": "10.06.2026"
+    },
+    {
       "vendor": "YouTube Premium",
       "avg_eur": 7.0,
       "monthly": true,
@@ -271,7 +278,7 @@
       "last_date": "15.06.2026"
     }
   ],
-  "monthly_subs_eur": 114.04,
+  "monthly_subs_eur": 122.59,
   "recommendations": {
     "summary": "За 30 дней потрачено $279.34 (≈€260), главная статья — LLM $183.55. Основной резерв — отмена подписки Anthropic Claude (€83.65/мес), YouTube Premium и Google One. Также были разовые Adobe/Autodesk €277.51 и Canva €102.31 — их стоит заменить бесплатными аналогами, чтобы не повторять таких трат.",
     "overpay": [
