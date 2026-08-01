@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-01 10:09",
-  "generated_ts": 1785571791,
+  "generated_at": "2026-08-01 10:12",
+  "generated_ts": 1785571951,
   "balances": {
-    "deepseek": 47.16,
+    "deepseek": 47.14,
     "openrouter_total": 59.76,
     "openrouter_monthly": 4.98,
     "firecrawl_sub": "€17/мес"
@@ -227,16 +227,16 @@
     {
       "vendor": "Anthropic (Claude)",
       "avg_eur": 83.65,
-      "monthly": false,
+      "monthly": true,
       "category": "tokens",
-      "last_date": "04.05.2026"
+      "last_date": "03.06.2026"
     },
     {
       "vendor": "Google One",
       "avg_eur": 17.4,
       "monthly": true,
       "category": "tools",
-      "last_date": "22.12.2025"
+      "last_date": "22.06.2026"
     },
     {
       "vendor": "Aqua Voice",
@@ -257,17 +257,17 @@
       "avg_eur": 7.0,
       "monthly": true,
       "category": "tools",
-      "last_date": "21.05.2026"
+      "last_date": "19.06.2026"
     },
     {
       "vendor": "Spotify",
       "avg_eur": 5.99,
       "monthly": true,
       "category": "tools",
-      "last_date": "15.12.2025"
+      "last_date": "15.06.2026"
     }
   ],
-  "monthly_subs_eur": 30.39,
+  "monthly_subs_eur": 114.04,
   "recommendations": {
     "summary": "Основные расходы за месяц приходятся на токены LLM (~$184), инструменты (~$80) и инфраструктуру (~$45). Регулярные подписки Google One, YouTube Premium и Spotify обходятся в ~€30/мес и не связаны напрямую с бизнесом — их можно отменить или заменить бесплатными аналогами. Наибольший потенциал экономии заложен в переходе с Claude на DeepSeek, что в 20 раз дешевле, но эти платежи не являются ежемесячной подпиской.",
     "overpay": [
