@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-08-01 10:06",
-  "generated_ts": 1785571583,
+  "generated_ts": 1785571609,
   "balances": {
     "deepseek": 47.2,
     "openrouter_total": 59.76,
@@ -229,7 +229,7 @@
       "avg_eur": 83.65,
       "monthly": false,
       "category": "tokens",
-      "last_date": "23.02.2026"
+      "last_date": "04.05.2026"
     },
     {
       "vendor": "Hetzner (сервер)",
@@ -241,7 +241,7 @@
     {
       "vendor": "Google One",
       "avg_eur": 17.4,
-      "monthly": false,
+      "monthly": true,
       "category": "tools",
       "last_date": "22.12.2025"
     },
@@ -262,19 +262,19 @@
     {
       "vendor": "YouTube Premium",
       "avg_eur": 7.0,
-      "monthly": false,
+      "monthly": true,
       "category": "tools",
       "last_date": "21.05.2026"
     },
     {
       "vendor": "Spotify",
       "avg_eur": 5.99,
-      "monthly": false,
+      "monthly": true,
       "category": "tools",
       "last_date": "15.12.2025"
     }
   ],
-  "monthly_subs_eur": 27.48,
+  "monthly_subs_eur": 57.87,
   "recommendations": {
     "summary": "Расходы на AI и подписки неоптимальны: переплачиваем за Adobe/Autodesk и Canva, а также за дорогие LLM (Claude) при наличии более дешёвого DeepSeek. Бюджет можно ужать почти вдвое за счёт отмены лишних подписок и перевода части задач на бесплатные аналоги. Ключевые бизнес-процессы (бот MAXI, KOMSILUK, скрейпинг) продолжают работать, но требуют контроля расходов и внедрения бесплатных инструментов.",
     "overpay": [
