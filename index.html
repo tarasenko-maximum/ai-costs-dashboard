@@ -191,7 +191,7 @@ function render(){
   document.getElementById('kpis').innerHTML = `
     <div class="kpi gold reveal"><div class="k-label">Баланс DeepSeek</div>
       <div class="k-val">${fmtUSD(b.deepseek)}</div>
-      <div class="k-sub">${dsChange!=null && dsChange<0 ? 'расход за сутки −$'+Math.abs(dsChange).toFixed(2) : 'за сутки ~$0'}</div></div>
+      <div class="k-sub">${b.deepseek_spend_month!=null ? 'расход ~'+fmtUSD(b.deepseek_spend_month)+'/мес' : (dsChange!=null && dsChange<0 ? 'расход за сутки −$'+Math.abs(dsChange).toFixed(2) : 'за сутки ~$0')}</div></div>
     <div class="kpi blue reveal"><div class="k-label">OpenRouter · месяц</div>
       <div class="k-val">${fmtUSD(b.openrouter_monthly)}</div>
       <div class="k-sub">всего ${fmtUSD(b.openrouter_total)}</div></div>
