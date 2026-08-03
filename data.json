@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-02 10:05",
-  "generated_ts": 1785657953,
+  "generated_at": "2026-08-03 10:05",
+  "generated_ts": 1785744302,
   "balances": {
-    "deepseek": 45.05,
-    "deepseek_spend_month": 38.85,
-    "deepseek_spend_days": 2,
+    "deepseek": 44.5,
+    "deepseek_spend_month": 31.4,
+    "deepseek_spend_days": 3,
     "openrouter_total": 0.0,
     "openrouter_monthly": 0.0,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
-    "month_usd": 274.0,
+    "month_usd": 295.1,
     "month_eur": 27.48,
-    "all_time_usd": 279.34,
+    "all_time_usd": 300.44,
     "all_time_eur": 27.48,
-    "tokens_usd": 183.55,
+    "tokens_usd": 204.65,
     "tools_usd": 79.99,
     "infra_usd": 45.48
   },
@@ -22,7 +22,7 @@
     {
       "key": "tokens",
       "label": "Токены LLM",
-      "amount": 183.55
+      "amount": 204.65
     },
     {
       "key": "tools",
@@ -43,7 +43,7 @@
     },
     {
       "name": "OpenRouter",
-      "usd": 63.55,
+      "usd": 84.65,
       "eur": 0.0
     },
     {
@@ -103,6 +103,13 @@
       "deepseek_topups_total": 0,
       "openrouter_usage": 0.0,
       "openrouter_monthly": 0.0
+    },
+    {
+      "date": "2026-08-03",
+      "deepseek_balance": 44.5,
+      "deepseek_topups_total": 0,
+      "openrouter_usage": 0.0,
+      "openrouter_monthly": 0.0
     }
   ],
   "payments": [
@@ -110,6 +117,14 @@
       "date": "Thu, 2 Jul",
       "vendor": "Anthropic (Claude)",
       "amount": 100.0,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "Sat, 1 Aug",
+      "vendor": "OpenRouter",
+      "amount": 21.1,
       "currency": "USD",
       "category": "tokens",
       "category_label": "Токены LLM"
@@ -219,7 +234,7 @@
       "category_label": "Инфраструктура"
     }
   ],
-  "payment_count": 14,
+  "payment_count": 15,
   "subscriptions": [
     {
       "vendor": "Adobe/Autodesk",
