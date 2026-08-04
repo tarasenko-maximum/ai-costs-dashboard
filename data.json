@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-08-03 10:05",
-  "generated_ts": 1785744302,
+  "generated_at": "2026-08-04 10:05",
+  "generated_ts": 1785830708,
   "balances": {
-    "deepseek": 44.5,
-    "deepseek_spend_month": 31.4,
-    "deepseek_spend_days": 3,
+    "deepseek": 42.01,
+    "deepseek_spend_month": 42.23,
+    "deepseek_spend_days": 4,
     "openrouter_total": 0.0,
     "openrouter_monthly": 0.0,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
-    "month_usd": 295.1,
-    "month_eur": 27.48,
-    "all_time_usd": 300.44,
-    "all_time_eur": 27.48,
-    "tokens_usd": 204.65,
+    "month_usd": 395.1,
+    "month_eur": 48.95,
+    "all_time_usd": 400.44,
+    "all_time_eur": 48.95,
+    "tokens_usd": 304.65,
     "tools_usd": 79.99,
-    "infra_usd": 45.48
+    "infra_usd": 68.67
   },
   "categories": [
     {
       "key": "tokens",
       "label": "Токены LLM",
-      "amount": 204.65
+      "amount": 304.65
     },
     {
       "key": "tools",
@@ -32,13 +32,13 @@
     {
       "key": "infra",
       "label": "Инфраструктура",
-      "amount": 45.48
+      "amount": 68.67
     }
   ],
   "vendors": [
     {
       "name": "Anthropic (Claude)",
-      "usd": 120.0,
+      "usd": 220.0,
       "eur": 0.0
     },
     {
@@ -55,6 +55,11 @@
       "name": "fal.ai",
       "usd": 25.0,
       "eur": 0.0
+    },
+    {
+      "name": "noreply billing - hetzner online gmbh <n",
+      "usd": 0.0,
+      "eur": 21.47
     },
     {
       "name": "Google Play",
@@ -110,6 +115,13 @@
       "deepseek_topups_total": 0,
       "openrouter_usage": 0.0,
       "openrouter_monthly": 0.0
+    },
+    {
+      "date": "2026-08-04",
+      "deepseek_balance": 42.02,
+      "deepseek_topups_total": 0,
+      "openrouter_usage": 0.0,
+      "openrouter_monthly": 0.0
     }
   ],
   "payments": [
@@ -128,6 +140,22 @@
       "currency": "USD",
       "category": "tokens",
       "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-02",
+      "vendor": "Anthropic (Claude)",
+      "amount": 100.0,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-01",
+      "vendor": "noreply billing - hetzner online gmbh <n",
+      "amount": 21.47,
+      "currency": "EUR",
+      "category": "infra",
+      "category_label": "Инфраструктура"
     },
     {
       "date": "2026-07-31",
@@ -234,7 +262,7 @@
       "category_label": "Инфраструктура"
     }
   ],
-  "payment_count": 15,
+  "payment_count": 17,
   "subscriptions": [
     {
       "vendor": "Adobe/Autodesk",
