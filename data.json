@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-07 10:05",
-  "generated_ts": 1786089912,
+  "generated_at": "2026-08-08 10:05",
+  "generated_ts": 1786176357,
   "balances": {
-    "deepseek": 34.29,
-    "deepseek_spend_month": 57.21,
-    "deepseek_spend_days": 7,
+    "deepseek": 30.58,
+    "deepseek_spend_month": 63.98,
+    "deepseek_spend_days": 8,
     "openrouter_total": 0.0,
     "openrouter_monthly": 0.0,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
     "month_usd": 395.1,
-    "month_eur": 48.95,
+    "month_eur": 74.15,
     "all_time_usd": 400.44,
-    "all_time_eur": 48.95,
-    "tokens_usd": 304.65,
+    "all_time_eur": 74.15,
+    "tokens_usd": 331.87,
     "tools_usd": 79.99,
     "infra_usd": 68.67
   },
@@ -22,7 +22,7 @@
     {
       "key": "tokens",
       "label": "Токены LLM",
-      "amount": 304.65
+      "amount": 331.87
     },
     {
       "key": "tools",
@@ -50,6 +50,11 @@
       "name": "Hetzner (сервер)",
       "usd": 0.0,
       "eur": 27.48
+    },
+    {
+      "name": "openai <noreply@tm.openai.com>",
+      "usd": 0.0,
+      "eur": 25.2
     },
     {
       "name": "fal.ai",
@@ -143,6 +148,13 @@
       "deepseek_topups_total": 0,
       "openrouter_usage": 0.0,
       "openrouter_monthly": 0.0
+    },
+    {
+      "date": "2026-08-08",
+      "deepseek_balance": 30.59,
+      "deepseek_topups_total": 0,
+      "openrouter_usage": 0.0,
+      "openrouter_monthly": 0.0
     }
   ],
   "payments": [
@@ -159,6 +171,14 @@
       "vendor": "OpenRouter",
       "amount": 21.1,
       "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-06",
+      "vendor": "openai <noreply@tm.openai.com>",
+      "amount": 25.2,
+      "currency": "EUR",
       "category": "tokens",
       "category_label": "Токены LLM"
     },
@@ -283,7 +303,7 @@
       "category_label": "Инфраструктура"
     }
   ],
-  "payment_count": 17,
+  "payment_count": 18,
   "subscriptions": [
     {
       "vendor": "Adobe/Autodesk",
