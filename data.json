@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-16 10:05",
-  "generated_ts": 1786867543,
+  "generated_at": "2026-08-17 10:05",
+  "generated_ts": 1786953900,
   "balances": {
-    "deepseek": 25.51,
-    "deepseek_spend_month": 69.99,
-    "deepseek_spend_days": 16,
-    "openrouter_total": 0.07,
-    "openrouter_monthly": 0.07,
+    "deepseek": 1.83,
+    "deepseek_spend_month": 110.65,
+    "deepseek_spend_days": 17,
+    "openrouter_total": 1.07,
+    "openrouter_monthly": 1.07,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
-    "month_usd": 425.1,
+    "month_usd": 475.1,
     "month_eur": 46.67,
-    "all_time_usd": 430.44,
+    "all_time_usd": 480.44,
     "all_time_eur": 74.15,
     "tokens_usd": 351.87,
-    "tools_usd": 89.99,
+    "tools_usd": 139.99,
     "infra_usd": 68.67
   },
   "categories": [
@@ -27,7 +27,7 @@
     {
       "key": "tools",
       "label": "Инструменты и подписки",
-      "amount": 89.99
+      "amount": 139.99
     },
     {
       "key": "infra",
@@ -47,6 +47,11 @@
       "eur": 0.0
     },
     {
+      "name": "fal.ai",
+      "usd": 75.0,
+      "eur": 0.0
+    },
+    {
       "name": "Hetzner (сервер)",
       "usd": 0.0,
       "eur": 48.95
@@ -55,11 +60,6 @@
       "name": "openai <noreply@tm.openai.com>",
       "usd": 0.0,
       "eur": 25.2
-    },
-    {
-      "name": "fal.ai",
-      "usd": 25.0,
-      "eur": 0.0
     },
     {
       "name": "Google Play",
@@ -211,6 +211,13 @@
       "deepseek_topups_total": 15.2,
       "openrouter_usage": 0.07,
       "openrouter_monthly": 0.07
+    },
+    {
+      "date": "2026-08-17",
+      "deepseek_balance": 1.91,
+      "deepseek_topups_total": 16.89,
+      "openrouter_usage": 1.07,
+      "openrouter_monthly": 1.07
     }
   ],
   "payments": [
@@ -253,6 +260,14 @@
       "currency": "USD",
       "category": "tokens",
       "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-15",
+      "vendor": "fal.ai",
+      "amount": 50.0,
+      "currency": "USD",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
     },
     {
       "date": "2026-08-10",
@@ -375,7 +390,7 @@
       "category_label": "Инфраструктура"
     }
   ],
-  "payment_count": 20,
+  "payment_count": 21,
   "subscriptions": [
     {
       "vendor": "Adobe/Autodesk",
