@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-18 10:05",
-  "generated_ts": 1787040317,
+  "generated_at": "2026-08-19 10:05",
+  "generated_ts": 1787126759,
   "balances": {
-    "deepseek": 28.36,
-    "deepseek_spend_month": 104.37,
-    "deepseek_spend_days": 18,
+    "deepseek": 24.43,
+    "deepseek_spend_month": 105.08,
+    "deepseek_spend_days": 19,
     "openrouter_total": 3.36,
     "openrouter_monthly": 3.36,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
-    "month_usd": 475.1,
+    "month_usd": 484.1,
     "month_eur": 46.67,
-    "all_time_usd": 480.44,
+    "all_time_usd": 489.44,
     "all_time_eur": 74.15,
     "tokens_usd": 351.87,
-    "tools_usd": 139.99,
+    "tools_usd": 148.99,
     "infra_usd": 68.67
   },
   "categories": [
@@ -27,7 +27,7 @@
     {
       "key": "tools",
       "label": "Инструменты и подписки",
-      "amount": 139.99
+      "amount": 148.99
     },
     {
       "key": "infra",
@@ -57,6 +57,11 @@
       "eur": 48.95
     },
     {
+      "name": "Firecrawl",
+      "usd": 28.0,
+      "eur": 0.0
+    },
+    {
       "name": "openai <noreply@tm.openai.com>",
       "usd": 0.0,
       "eur": 25.2
@@ -64,11 +69,6 @@
     {
       "name": "Google Play",
       "usd": 19.99,
-      "eur": 0.0
-    },
-    {
-      "name": "Firecrawl",
-      "usd": 19.0,
       "eur": 0.0
     },
     {
@@ -225,6 +225,13 @@
       "deepseek_topups_total": 43.34,
       "openrouter_usage": 3.36,
       "openrouter_monthly": 3.36
+    },
+    {
+      "date": "2026-08-19",
+      "deepseek_balance": 24.44,
+      "deepseek_topups_total": 43.34,
+      "openrouter_usage": 3.36,
+      "openrouter_monthly": 3.36
     }
   ],
   "payments": [
@@ -267,6 +274,14 @@
       "currency": "USD",
       "category": "tokens",
       "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-17",
+      "vendor": "Firecrawl",
+      "amount": 9.0,
+      "currency": "USD",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
     },
     {
       "date": "2026-08-15",
@@ -397,7 +412,7 @@
       "category_label": "Инфраструктура"
     }
   ],
-  "payment_count": 21,
+  "payment_count": 22,
   "subscriptions": [
     {
       "vendor": "Adobe/Autodesk",
