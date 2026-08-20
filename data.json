@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-19 10:05",
-  "generated_ts": 1787126759,
+  "generated_at": "2026-08-20 10:05",
+  "generated_ts": 1787213125,
   "balances": {
-    "deepseek": 24.43,
-    "deepseek_spend_month": 105.08,
-    "deepseek_spend_days": 19,
+    "deepseek": 21.31,
+    "deepseek_spend_month": 104.51,
+    "deepseek_spend_days": 20,
     "openrouter_total": 3.36,
     "openrouter_monthly": 3.36,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
-    "month_usd": 484.1,
+    "month_usd": 453.31,
     "month_eur": 46.67,
     "all_time_usd": 489.44,
     "all_time_eur": 74.15,
@@ -229,6 +229,13 @@
     {
       "date": "2026-08-19",
       "deepseek_balance": 24.44,
+      "deepseek_topups_total": 43.34,
+      "openrouter_usage": 3.36,
+      "openrouter_monthly": 3.36
+    },
+    {
+      "date": "2026-08-20",
+      "deepseek_balance": 21.45,
       "deepseek_topups_total": 43.34,
       "openrouter_usage": 3.36,
       "openrouter_monthly": 3.36
