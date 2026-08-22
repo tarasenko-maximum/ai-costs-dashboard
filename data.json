@@ -1,44 +1,44 @@
 {
-  "generated_at": "2026-08-21 10:05",
-  "generated_ts": 1787299525,
+  "generated_at": "2026-08-22 10:05",
+  "generated_ts": 1787385923,
   "balances": {
-    "deepseek": 18.31,
-    "deepseek_spend_month": 103.81,
-    "deepseek_spend_days": 21,
-    "openrouter_total": 3.36,
-    "openrouter_monthly": 3.36,
+    "deepseek": 16.56,
+    "deepseek_spend_month": 101.48,
+    "deepseek_spend_days": 22,
+    "openrouter_total": 4.96,
+    "openrouter_monthly": 4.96,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
-    "month_usd": 453.31,
+    "month_usd": 533.3,
     "month_eur": 46.67,
-    "all_time_usd": 489.44,
+    "all_time_usd": 579.43,
     "all_time_eur": 74.15,
-    "tokens_usd": 351.87,
-    "tools_usd": 148.99,
-    "infra_usd": 68.67
+    "tokens_usd": 411.87,
+    "tools_usd": 168.98,
+    "infra_usd": 78.67
   },
   "categories": [
     {
       "key": "tokens",
       "label": "Токены LLM",
-      "amount": 351.87
+      "amount": 411.87
     },
     {
       "key": "tools",
       "label": "Инструменты и подписки",
-      "amount": 148.99
+      "amount": 168.98
     },
     {
       "key": "infra",
       "label": "Инфраструктура",
-      "amount": 68.67
+      "amount": 78.67
     }
   ],
   "vendors": [
     {
       "name": "Anthropic (Claude)",
-      "usd": 240.0,
+      "usd": 300.0,
       "eur": 0.0
     },
     {
@@ -57,24 +57,24 @@
       "eur": 48.95
     },
     {
+      "name": "Google Play",
+      "usd": 39.98,
+      "eur": 0.0
+    },
+    {
       "name": "Firecrawl",
       "usd": 28.0,
+      "eur": 0.0
+    },
+    {
+      "name": "Cloudflare",
+      "usd": 25.8,
       "eur": 0.0
     },
     {
       "name": "openai <noreply@tm.openai.com>",
       "usd": 0.0,
       "eur": 25.2
-    },
-    {
-      "name": "Google Play",
-      "usd": 19.99,
-      "eur": 0.0
-    },
-    {
-      "name": "Cloudflare",
-      "usd": 15.8,
-      "eur": 0.0
     },
     {
       "name": "\"suno\" <invoice+statements@suno.com>",
@@ -246,6 +246,13 @@
       "deepseek_topups_total": 43.34,
       "openrouter_usage": 3.36,
       "openrouter_monthly": 3.36
+    },
+    {
+      "date": "2026-08-22",
+      "deepseek_balance": 16.56,
+      "deepseek_topups_total": 43.34,
+      "openrouter_usage": 4.96,
+      "openrouter_monthly": 4.96
     }
   ],
   "payments": [
@@ -288,6 +295,54 @@
       "currency": "USD",
       "category": "tokens",
       "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-20",
+      "vendor": "Anthropic (Claude)",
+      "amount": 20.0,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-20",
+      "vendor": "Anthropic (Claude)",
+      "amount": 20.0,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-20",
+      "vendor": "Anthropic (Claude)",
+      "amount": 20.0,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-20",
+      "vendor": "Google Play",
+      "amount": 19.99,
+      "currency": "USD",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
+    },
+    {
+      "date": "2026-08-18",
+      "vendor": "Cloudflare",
+      "amount": 5.0,
+      "currency": "USD",
+      "category": "infra",
+      "category_label": "Инфраструктура"
+    },
+    {
+      "date": "2026-08-18",
+      "vendor": "Cloudflare",
+      "amount": 5.0,
+      "currency": "USD",
+      "category": "infra",
+      "category_label": "Инфраструктура"
     },
     {
       "date": "2026-08-17",
@@ -426,7 +481,7 @@
       "category_label": "Инфраструктура"
     }
   ],
-  "payment_count": 22,
+  "payment_count": 28,
   "subscriptions": [
     {
       "vendor": "Adobe/Autodesk",
