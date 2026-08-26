@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-25 10:05",
-  "generated_ts": 1787645126,
+  "generated_at": "2026-08-26 10:05",
+  "generated_ts": 1787731524,
   "balances": {
-    "deepseek": 31.47,
-    "deepseek_spend_month": 90.19,
-    "deepseek_spend_days": 25,
-    "openrouter_total": 5.27,
-    "openrouter_monthly": 5.27,
+    "deepseek": 28.06,
+    "deepseek_spend_month": 90.66,
+    "deepseek_spend_days": 26,
+    "openrouter_total": 5.28,
+    "openrouter_monthly": 5.28,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
-    "month_usd": 467.2,
+    "month_usd": 477.2,
     "month_eur": 46.67,
-    "all_time_usd": 579.43,
+    "all_time_usd": 589.43,
     "all_time_eur": 74.15,
     "tokens_usd": 411.87,
-    "tools_usd": 168.98,
+    "tools_usd": 178.98,
     "infra_usd": 78.67
   },
   "categories": [
@@ -27,7 +27,7 @@
     {
       "key": "tools",
       "label": "Инструменты и подписки",
-      "amount": 168.98
+      "amount": 178.98
     },
     {
       "key": "infra",
@@ -77,12 +77,12 @@
       "eur": 25.2
     },
     {
-      "name": "\"suno\" <invoice+statements@suno.com>",
-      "usd": 10.0,
+      "name": "Aqua Voice",
+      "usd": 20.0,
       "eur": 0.0
     },
     {
-      "name": "Aqua Voice",
+      "name": "\"suno\" <invoice+statements@suno.com>",
       "usd": 10.0,
       "eur": 0.0
     },
@@ -274,6 +274,13 @@
       "deepseek_topups_total": 58.99,
       "openrouter_usage": 5.27,
       "openrouter_monthly": 5.27
+    },
+    {
+      "date": "2026-08-26",
+      "deepseek_balance": 28.06,
+      "deepseek_topups_total": 58.99,
+      "openrouter_usage": 5.28,
+      "openrouter_monthly": 5.28
     }
   ],
   "payments": [
@@ -316,6 +323,14 @@
       "currency": "USD",
       "category": "tokens",
       "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-22",
+      "vendor": "Aqua Voice",
+      "amount": 10.0,
+      "currency": "USD",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
     },
     {
       "date": "2026-08-20",
@@ -502,7 +517,7 @@
       "category_label": "Инфраструктура"
     }
   ],
-  "payment_count": 28,
+  "payment_count": 29,
   "subscriptions": [
     {
       "vendor": "Adobe/Autodesk",
