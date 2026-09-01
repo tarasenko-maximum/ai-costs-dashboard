@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-08-31 10:05",
-  "generated_ts": 1788163512,
+  "generated_at": "2026-09-01 10:05",
+  "generated_ts": 1788249939,
   "balances": {
-    "deepseek": 36.49,
-    "deepseek_spend_month": 85.1,
-    "deepseek_spend_days": 31,
+    "deepseek": 33.01,
+    "deepseek_spend_month": 85.71,
+    "deepseek_spend_days": 32,
     "openrouter_total": 5.29,
-    "openrouter_monthly": 5.29,
+    "openrouter_monthly": 0,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
-    "month_usd": 410.09,
+    "month_usd": 576.09,
     "month_eur": 46.67,
-    "all_time_usd": 589.43,
+    "all_time_usd": 755.43,
     "all_time_eur": 74.15,
-    "tokens_usd": 411.87,
-    "tools_usd": 178.98,
+    "tokens_usd": 571.87,
+    "tools_usd": 184.98,
     "infra_usd": 78.67
   },
   "categories": [
     {
       "key": "tokens",
       "label": "Токены LLM",
-      "amount": 411.87
+      "amount": 571.87
     },
     {
       "key": "tools",
       "label": "Инструменты и подписки",
-      "amount": 178.98
+      "amount": 184.98
     },
     {
       "key": "infra",
@@ -38,7 +38,7 @@
   "vendors": [
     {
       "name": "Anthropic (Claude)",
-      "usd": 300.0,
+      "usd": 460.0,
       "eur": 0.0
     },
     {
@@ -82,13 +82,13 @@
       "eur": 0.0
     },
     {
-      "name": "\"suno\" <invoice+statements@suno.com>",
-      "usd": 10.0,
+      "name": "\"eleven labs inc.\" <invoice+statements+a",
+      "usd": 12.0,
       "eur": 0.0
     },
     {
-      "name": "\"eleven labs inc.\" <invoice+statements+a",
-      "usd": 6.0,
+      "name": "\"suno\" <invoice+statements@suno.com>",
+      "usd": 10.0,
       "eur": 0.0
     }
   ],
@@ -316,6 +316,13 @@
       "deepseek_topups_total": 76.79,
       "openrouter_usage": 5.29,
       "openrouter_monthly": 5.29
+    },
+    {
+      "date": "2026-09-01",
+      "deepseek_balance": 33.09,
+      "deepseek_topups_total": 76.79,
+      "openrouter_usage": 5.29,
+      "openrouter_monthly": 0
     }
   ],
   "payments": [
@@ -355,6 +362,46 @@
       "date": "Sat, 1 Aug",
       "vendor": "OpenRouter",
       "amount": 21.1,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-28",
+      "vendor": "\"eleven labs inc.\" <invoice+statements+a",
+      "amount": 6.0,
+      "currency": "USD",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
+    },
+    {
+      "date": "2026-08-27",
+      "vendor": "Anthropic (Claude)",
+      "amount": 20.0,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-27",
+      "vendor": "Anthropic (Claude)",
+      "amount": 100.0,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-27",
+      "vendor": "Anthropic (Claude)",
+      "amount": 20.0,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-25",
+      "vendor": "Anthropic (Claude)",
+      "amount": 20.0,
       "currency": "USD",
       "category": "tokens",
       "category_label": "Токены LLM"
@@ -552,7 +599,7 @@
       "category_label": "Инфраструктура"
     }
   ],
-  "payment_count": 29,
+  "payment_count": 34,
   "subscriptions": [
     {
       "vendor": "Adobe/Autodesk",
