@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-09-01 10:05",
-  "generated_ts": 1788249939,
+  "generated_at": "2026-09-02 10:05",
+  "generated_ts": 1788336356,
   "balances": {
-    "deepseek": 33.01,
-    "deepseek_spend_month": 85.71,
-    "deepseek_spend_days": 32,
-    "openrouter_total": 5.29,
-    "openrouter_monthly": 0,
+    "deepseek": 29.16,
+    "deepseek_spend_month": 86.61,
+    "deepseek_spend_days": 33,
+    "openrouter_total": 5.32,
+    "openrouter_monthly": 0.03,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
-    "month_usd": 576.09,
+    "month_usd": 604.09,
     "month_eur": 46.67,
-    "all_time_usd": 755.43,
+    "all_time_usd": 783.43,
     "all_time_eur": 74.15,
     "tokens_usd": 571.87,
-    "tools_usd": 184.98,
+    "tools_usd": 212.98,
     "infra_usd": 78.67
   },
   "categories": [
@@ -27,7 +27,7 @@
     {
       "key": "tools",
       "label": "Инструменты и подписки",
-      "amount": 184.98
+      "amount": 212.98
     },
     {
       "key": "infra",
@@ -52,6 +52,11 @@
       "eur": 0.0
     },
     {
+      "name": "Firecrawl",
+      "usd": 56.0,
+      "eur": 0.0
+    },
+    {
       "name": "Hetzner (сервер)",
       "usd": 0.0,
       "eur": 48.95
@@ -59,11 +64,6 @@
     {
       "name": "Google Play",
       "usd": 39.98,
-      "eur": 0.0
-    },
-    {
-      "name": "Firecrawl",
-      "usd": 28.0,
       "eur": 0.0
     },
     {
@@ -323,6 +323,13 @@
       "deepseek_topups_total": 76.79,
       "openrouter_usage": 5.29,
       "openrouter_monthly": 0
+    },
+    {
+      "date": "2026-09-02",
+      "deepseek_balance": 29.16,
+      "deepseek_topups_total": 76.79,
+      "openrouter_usage": 5.32,
+      "openrouter_monthly": 0.03
     }
   ],
   "payments": [
@@ -365,6 +372,14 @@
       "currency": "USD",
       "category": "tokens",
       "category_label": "Токены LLM"
+    },
+    {
+      "date": "2026-08-31",
+      "vendor": "Firecrawl",
+      "amount": 28.0,
+      "currency": "USD",
+      "category": "tools",
+      "category_label": "Инструменты и подписки"
     },
     {
       "date": "2026-08-28",
@@ -599,7 +614,7 @@
       "category_label": "Инфраструктура"
     }
   ],
-  "payment_count": 34,
+  "payment_count": 35,
   "subscriptions": [
     {
       "vendor": "Adobe/Autodesk",
@@ -644,13 +659,6 @@
       "last_date": "15.06.2026"
     },
     {
-      "vendor": "Suno (Pro)",
-      "avg_eur": 8.55,
-      "monthly": true,
-      "category": "tools",
-      "last_date": "10.06.2026"
-    },
-    {
       "vendor": "YouTube Premium",
       "avg_eur": 7.0,
       "monthly": true,
@@ -665,7 +673,7 @@
       "last_date": "15.06.2026"
     }
   ],
-  "monthly_subs_eur": 122.59,
+  "monthly_subs_eur": 114.04,
   "recommendations": {
     "summary": "Ежемесячно на AI и подписки уходит около $460+, при этом основные деньги сжигают Anthropic Claude и OpenRouter, хотя для большинства задач достаточно DeepSeek (в ~20 раз дешевле). Регулярные подписки с карты дают ~€123/мес, из которых минимум €114 можно исключить или перераспределить. Рекомендую перевести рутину на DeepSeek/LiteLLM, а Claude/fal.ai оставить только под сложные задачи и производство KOMSILUK.",
     "overpay": [
