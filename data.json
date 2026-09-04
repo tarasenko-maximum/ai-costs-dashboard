@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-09-03 10:05",
-  "generated_ts": 1788422728,
+  "generated_at": "2026-09-04 10:05",
+  "generated_ts": 1788509114,
   "balances": {
-    "deepseek": 27.65,
-    "deepseek_spend_month": 85.39,
-    "deepseek_spend_days": 34,
-    "openrouter_total": 5.32,
-    "openrouter_monthly": 0.03,
+    "deepseek": 21.44,
+    "deepseek_spend_month": 88.28,
+    "deepseek_spend_days": 35,
+    "openrouter_total": 5.39,
+    "openrouter_monthly": 0.09,
     "firecrawl_sub": "€17/мес"
   },
   "totals": {
-    "month_usd": 604.09,
-    "month_eur": 46.67,
-    "all_time_usd": 783.43,
-    "all_time_eur": 74.15,
-    "tokens_usd": 571.87,
+    "month_usd": 704.09,
+    "month_eur": 63.73,
+    "all_time_usd": 883.43,
+    "all_time_eur": 91.21,
+    "tokens_usd": 671.87,
     "tools_usd": 212.98,
-    "infra_usd": 78.67
+    "infra_usd": 97.09
   },
   "categories": [
     {
       "key": "tokens",
       "label": "Токены LLM",
-      "amount": 571.87
+      "amount": 671.87
     },
     {
       "key": "tools",
@@ -32,13 +32,13 @@
     {
       "key": "infra",
       "label": "Инфраструктура",
-      "amount": 78.67
+      "amount": 97.09
     }
   ],
   "vendors": [
     {
       "name": "Anthropic (Claude)",
-      "usd": 460.0,
+      "usd": 560.0,
       "eur": 0.0
     },
     {
@@ -52,14 +52,14 @@
       "eur": 0.0
     },
     {
+      "name": "Hetzner (сервер)",
+      "usd": 0.0,
+      "eur": 66.01
+    },
+    {
       "name": "Firecrawl",
       "usd": 56.0,
       "eur": 0.0
-    },
-    {
-      "name": "Hetzner (сервер)",
-      "usd": 0.0,
-      "eur": 48.95
     },
     {
       "name": "Google Play",
@@ -337,9 +337,32 @@
       "deepseek_topups_total": 76.79,
       "openrouter_usage": 5.32,
       "openrouter_monthly": 0.03
+    },
+    {
+      "date": "2026-09-04",
+      "deepseek_balance": 21.48,
+      "deepseek_topups_total": 76.79,
+      "openrouter_usage": 5.39,
+      "openrouter_monthly": 0.09
     }
   ],
   "payments": [
+    {
+      "date": "Wed, 2 Sep",
+      "vendor": "Anthropic (Claude)",
+      "amount": 100.0,
+      "currency": "USD",
+      "category": "tokens",
+      "category_label": "Токены LLM"
+    },
+    {
+      "date": "Tue, 1 Sep",
+      "vendor": "Hetzner (сервер)",
+      "amount": 17.06,
+      "currency": "EUR",
+      "category": "infra",
+      "category_label": "Инфраструктура"
+    },
     {
       "date": "Thu, 6 Aug",
       "vendor": "Hetzner (сервер)",
@@ -621,7 +644,7 @@
       "category_label": "Инфраструктура"
     }
   ],
-  "payment_count": 35,
+  "payment_count": 37,
   "subscriptions": [
     {
       "vendor": "Adobe/Autodesk",
